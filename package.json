@@ -16,8 +16,8 @@
     "build:assets": "copyfiles -u 1 'src/assets/**/*' dist",
     "serve:dist": "live-server dist",
     "preview": "npm run build && npm run serve:dist",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=hotel-website",
-    "deploy:preview": "npm run build && wrangler pages deploy dist --project-name=hotel-website --branch=preview"
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=hotel-website",
+    "deploy:preview": "npm run build && npx wrangler pages deploy dist --project-name=hotel-website --branch=preview"
   },
   "keywords": [
     "hotel",
@@ -27,12 +27,12 @@
   ],
   "author": "Your Name",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "live-server": "^1.2.1",
     "clean-css-cli": "^5.6.3",
-    "terser": "^5.36.0",
     "copyfiles": "^2.4.1",
-    "rimraf": "^6.0.1"
+    "live-server": "^1.2.1",
+    "rimraf": "^6.0.1",
+    "terser": "^5.36.0",
+    "wrangler": "^4.50.0"
   }
 }
