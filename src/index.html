@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepes Inspired Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="sticky">
+        <div class="header-container">
+            <h1><a href="#" class="logo-text">PEPE'S</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>The HOME OF FRESH<br>FLAME-GRILLED<br>CHICKEN</h2>
+            <p>244 Stores serving fresh flame-grilled Pepe'licious™ Chicken</p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Large Featured Image Carousel -->
+    <section class="featured-carousel">
+        <div class="container">
+            <div class="large-carousel">
+                <button class="carousel-btn prev" id="large-prev">‹</button>
+                <div class="large-carousel-track">
+                    <!-- Images will be dynamically inserted -->
+                </div>
+                <button class="carousel-btn next" id="large-next">›</button>
+            </div>
+            <div class="carousel-dots" id="large-dots"></div>
+        </div>
+    </section>
+
+    <!-- Small Item Carousel -->
+    <section class="items-carousel-section">
+        <div class="container">
+            <h2>Featured Items</h2>
+            <p class="section-subtitle">Discover our most popular dishes</p>
+            <div class="items-carousel">
+                <button class="carousel-btn prev small" id="items-prev">‹</button>
+                <div class="items-carousel-track">
+                    <!-- Items will be dynamically inserted -->
+                </div>
+                <button class="carousel-btn next small" id="items-next">›</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p class="section-subtitle">Flame-grilled perfection in every bite</p>
+            <div class="menu-list">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <p class="section-subtitle">Find a Pepe's near you</p>
+            <div class="locations-list">
+                <!-- Locations will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery images will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#menu">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2023 Pepes Inspired Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
