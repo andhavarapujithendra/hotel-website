@@ -7,7 +7,8 @@
     <title>Pepes Inspired Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -20,9 +21,9 @@
             <h1><a href="#" class="logo-text">PEPE'S</a></h1>
             <nav>
                 <a href="#menu">Menu</a>
+                <a href="#flavours">Flavours</a>
                 <a href="#locations">Locations</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
+                <a href="#franchise">Franchise</a>
             </nav>
         </div>
     </header>
@@ -31,29 +32,27 @@
         <div class="hero-content">
             <h2>The HOME OF FRESH<br>FLAME-GRILLED<br>CHICKEN</h2>
             <p>244 Stores serving fresh flame-grilled Pepe'licious™ Chicken</p>
-            <a href="#menu" class="btn">View Our Menu</a>
+            <a href="#locations" class="btn">Find your nearest Pepe's</a>
         </div>
     </section>
 
     <!-- Large Featured Image Carousel -->
     <section class="featured-carousel">
-        <div class="container">
-            <div class="large-carousel">
-                <button class="carousel-btn prev" id="large-prev">‹</button>
-                <div class="large-carousel-track">
-                    <!-- Images will be dynamically inserted -->
-                </div>
-                <button class="carousel-btn next" id="large-next">›</button>
+        <div class="large-carousel">
+            <button class="carousel-btn prev" id="large-prev">‹</button>
+            <div class="large-carousel-track">
+                <!-- Images will be dynamically inserted -->
             </div>
-            <div class="carousel-dots" id="large-dots"></div>
+            <button class="carousel-btn next" id="large-next">›</button>
         </div>
+        <div class="carousel-dots" id="large-dots"></div>
     </section>
 
-    <!-- Small Item Carousel -->
+    <!-- Menu Items Carousel -->
     <section class="items-carousel-section">
         <div class="container">
-            <h2>Featured Items</h2>
-            <p class="section-subtitle">Discover our most popular dishes</p>
+            <h2>Our Menu</h2>
+            <p class="section-subtitle">Discover our flame-grilled favorites</p>
             <div class="items-carousel">
                 <button class="carousel-btn prev small" id="items-prev">‹</button>
                 <div class="items-carousel-track">
@@ -61,55 +60,168 @@
                 </div>
                 <button class="carousel-btn next small" id="items-next">›</button>
             </div>
-        </div>
-    </section>
-
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h2>Our Menu</h2>
-            <p class="section-subtitle">Flame-grilled perfection in every bite</p>
-            <div class="menu-list">
-                <!-- Menu items will be dynamically inserted here -->
+            <div class="view-menu-btn-container">
+                <a href="#menu" class="btn">View Our Menu</a>
             </div>
         </div>
     </section>
 
-    <section id="locations" class="locations-section">
+    <!-- What's Your Flavour Section -->
+    <section id="flavours" class="flavours-section">
         <div class="container">
-            <h2>Our Locations</h2>
-            <p class="section-subtitle">Find a Pepe's near you</p>
-            <div class="locations-list">
-                <!-- Locations will be dynamically inserted here -->
+            <h2>WHAT'S YOUR FLAVOUR?</h2>
+            <p class="section-subtitle">Our selection of Piri Piri sauces combines flavour with heat in varied amounts
+                to satisfy the palates of Piri Piri novices and experienced heat lovers.</p>
+            <div class="flavours-grid">
+                <div class="flavour-item">
+                    <div class="flavour-icon">🌿</div>
+                    <h3>Lemon & Herb</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🔥</div>
+                    <h3>Mild</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🔥</div>
+                    <h3>Medium</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🔥</div>
+                    <h3>Hot</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🔥🔥</div>
+                    <h3>Extra Hot</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🔥🔥🔥</div>
+                    <h3>XX Hot</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <!-- Gallery images will be dynamically inserted here -->
+    <!-- Franchise Section -->
+    <section id="franchise" class="franchise-section">
+        <div class="container">
+            <div class="franchise-content">
+                <h2>Franchise A PEPE'S</h2>
+                <p>Interested in becoming part of one of UK's fastest growing and most popular Piri Piri brands?</p>
+                <a href="#contact" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section">
+        <div class="container">
+            <h2>Connect</h2>
+            <div class="connect-grid">
+                <a href="#locations" class="connect-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Find Your Local Pepe's</span>
+                </a>
+                <a href="#" class="connect-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Follow us on TikTok</span>
+                </a>
+                <a href="#" class="connect-item">
+                    <i class="fab fa-facebook"></i>
+                    <span>Like us on Facebook</span>
+                </a>
+                <a href="#" class="connect-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>Follow us on Instagram</span>
+                </a>
+                <a href="#" class="connect-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Download the Pepe's App</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-links">
-                <a href="#menu">Menu</a>
-                <a href="#locations">Locations</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
+            <div class="footer-logo">
+                <h2>PEPE'S</h2>
             </div>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#franchise">Franchising</a>
+                    <a href="#menu">Nutrition and Allergens</a>
+                    <a href="#news">What's New</a>
+                    <a href="#jobs">Jobs</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Download Our App</h3>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <span>Play Store</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2023 Pepes Inspired Website. All rights reserved.</p>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms and Conditions</a>
+                </div>
+                <p>&copy; 2023 Pepe's Piri Piri. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/carousel.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 
 </html>

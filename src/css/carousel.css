@@ -148,7 +148,7 @@
 }
 
 .carousel-btn:hover {
-    background: var(--primary-red);
+    background: var(--primary-orange);
     color: white;
     transform: translateY(-50%) scale(1.1);
 }
@@ -190,5 +190,5 @@
 }
 
 .dot:hover {
-    background: var(--primary-red);
+    background: var(--primary-orange);
 }
