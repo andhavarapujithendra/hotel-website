@@ -2,7 +2,7 @@
   "name": "hotel-website",
   "version": "1.0.0",
   "description": "A static website for a hotel showcasing its features and services.",
-  "main": "src/index.html",
+  "private": true,
   "scripts": {
     "start": "live-server src",
     "dev": "npm run start",
@@ -15,7 +15,9 @@
     "build:js": "mkdir -p dist/js && terser src/js/script.js -o dist/js/script.min.js -c -m && terser src/js/carousel.js -o dist/js/carousel.min.js -c -m",
     "build:assets": "copyfiles -u 1 'src/assets/**/*' dist",
     "serve:dist": "live-server dist",
-    "preview": "npm run build && npm run serve:dist"
+    "preview": "npm run build && npm run serve:dist",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=hotel-website",
+    "deploy:preview": "npm run build && wrangler pages deploy dist --project-name=hotel-website --branch=preview"
   },
   "keywords": [
     "hotel",
