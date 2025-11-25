@@ -4,96 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepes Inspired Website</title>
+    <title>Cluck N Smash</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header class="sticky">
+    <header>
         <div class="header-container">
-            <h1><a href="#" class="logo-text">PEPE'S</a></h1>
-            <nav>
-                <a href="#menu">Menu</a>
-                <a href="#flavours">Flavours</a>
-                <a href="#locations">Locations</a>
-                <a href="#franchise">Franchise</a>
+            <h1><a href="#" class="logo-text"><span class="logo-cluck">Cluck</span> <span class="logo-n">N</span> <span
+                        class="logo-smash">Smash</span></a></h1>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#flavours" class="nav-link">Flavours</a>
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#franchise" class="nav-link">Franchise</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h2>The HOME OF FRESH<br>FLAME-GRILLED<br>CHICKEN</h2>
-            <p>244 Stores serving fresh flame-grilled Pepe'licious™ Chicken</p>
-            <a href="#locations" class="btn">Find your nearest Pepe's</a>
+            <h2>Taste the Crunch</h2>
+            <p>Authentic Nashville Hot Chicken & Smash Burgers</p>
+            <a href="#locations" class="btn">Find your nearest Cluck N Smash</a>
         </div>
     </section>
 
-    <!-- Large Featured Image Carousel -->
-    <section class="featured-carousel">
-        <div class="large-carousel">
-            <button class="carousel-btn prev" id="large-prev">‹</button>
+    <!-- Large Featured Carousel -->
+    <section class="featured-carousel-section">
+        <div class="large-carousel-container">
             <div class="large-carousel-track">
-                <!-- Images will be dynamically inserted -->
+                <!-- Slides injected by JS -->
             </div>
-            <button class="carousel-btn next" id="large-next">›</button>
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-indicators">
+                <!-- Indicators injected by JS -->
+            </div>
         </div>
-        <div class="carousel-dots" id="large-dots"></div>
     </section>
 
     <!-- Menu Items Carousel -->
-    <section class="items-carousel-section">
+    <section class="menu-carousel-section" id="menu">
         <div class="container">
             <h2>Our Menu</h2>
-            <p class="section-subtitle">Discover our flame-grilled favorites</p>
-            <div class="items-carousel">
-                <button class="carousel-btn prev small" id="items-prev">‹</button>
-                <div class="items-carousel-track">
-                    <!-- Items will be dynamically inserted -->
+            <p class="section-subtitle">Freshly prepared daily</p>
+            <div class="items-carousel-wrapper">
+                <button class="items-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="items-carousel-container">
+                    <div class="items-carousel-track">
+                        <!-- Items injected by JS -->
+                    </div>
                 </div>
-                <button class="carousel-btn next small" id="items-next">›</button>
+                <button class="items-nav-btn next"><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="view-menu-btn-container">
-                <a href="#menu" class="btn">View Our Menu</a>
+                <a href="#" class="btn">View Full Menu</a>
             </div>
         </div>
     </section>
 
     <!-- What's Your Flavour Section -->
-    <section id="flavours" class="flavours-section">
-        <div class="container">
-            <h2>WHAT'S YOUR FLAVOUR?</h2>
-            <p class="section-subtitle">Our selection of Piri Piri sauces combines flavour with heat in varied amounts
-                to satisfy the palates of Piri Piri novices and experienced heat lovers.</p>
+    <section class="flavours-section" id="flavours">
+        <div class="content-section">
+            <h2>What's Your Flavour?</h2>
+            <p class="section-subtitle">Choose your heat level</p>
             <div class="flavours-grid">
                 <div class="flavour-item">
-                    <div class="flavour-icon">🌿</div>
+                    <div class="flavour-icon">🍋</div>
                     <h3>Lemon & Herb</h3>
                     <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot"></span>
+                        <span class="heat-dot"></span>
                         <span class="heat-dot"></span>
                     </div>
                 </div>
                 <div class="flavour-item">
-                    <div class="flavour-icon">🔥</div>
+                    <div class="flavour-icon">🥭</div>
+                    <h3>Mango & Lime</h3>
+                    <div class="heat-level">
+                        <span class="heat-dot active"></span>
+                        <span class="heat-dot"></span>
+                        <span class="heat-dot"></span>
+                        <span class="heat-dot"></span>
+                    </div>
+                </div>
+                <div class="flavour-item">
+                    <div class="flavour-icon">🌶️</div>
                     <h3>Mild</h3>
                     <div class="heat-level">
                         <span class="heat-dot active"></span>
+                        <span class="heat-dot active"></span>
                         <span class="heat-dot"></span>
-                    </div>
-                </div>
-                <div class="flavour-item">
-                    <div class="flavour-icon">🔥</div>
-                    <h3>Medium</h3>
-                    <div class="heat-level">
-                        <span class="heat-dot active"></span>
-                        <span class="heat-dot active"></span>
                         <span class="heat-dot"></span>
                     </div>
                 </div>
@@ -108,20 +128,9 @@
                     </div>
                 </div>
                 <div class="flavour-item">
-                    <div class="flavour-icon">🔥🔥</div>
+                    <div class="flavour-icon">☠️</div>
                     <h3>Extra Hot</h3>
                     <div class="heat-level">
-                        <span class="heat-dot active"></span>
-                        <span class="heat-dot active"></span>
-                        <span class="heat-dot active"></span>
-                        <span class="heat-dot active"></span>
-                    </div>
-                </div>
-                <div class="flavour-item">
-                    <div class="flavour-icon">🔥🔥🔥</div>
-                    <h3>XX Hot</h3>
-                    <div class="heat-level">
-                        <span class="heat-dot active"></span>
                         <span class="heat-dot active"></span>
                         <span class="heat-dot active"></span>
                         <span class="heat-dot active"></span>
@@ -133,40 +142,34 @@
     </section>
 
     <!-- Franchise Section -->
-    <section id="franchise" class="franchise-section">
-        <div class="container">
-            <div class="franchise-content">
-                <h2>Franchise A PEPE'S</h2>
-                <p>Interested in becoming part of one of UK's fastest growing and most popular Piri Piri brands?</p>
-                <a href="#contact" class="btn">Learn More</a>
-            </div>
+    <section class="franchise-section" id="franchise">
+        <div class="franchise-content">
+            <h2>Franchise A Cluck N Smash</h2>
+            <p>Join the fastest growing chicken franchise family. Be part of our success story.</p>
+            <a href="#" class="btn">Enquire Now</a>
         </div>
     </section>
 
     <!-- Connect Section -->
     <section class="connect-section">
-        <div class="container">
-            <h2>Connect</h2>
+        <div class="content-section">
+            <h2>Connect With Us</h2>
             <div class="connect-grid">
-                <a href="#locations" class="connect-item">
+                <a href="#" class="connect-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Find Your Local Pepe's</span>
+                    <span>Find Your Local Cluck N Smash</span>
                 </a>
                 <a href="#" class="connect-item">
-                    <i class="fab fa-tiktok"></i>
-                    <span>Follow us on TikTok</span>
-                </a>
-                <a href="#" class="connect-item">
-                    <i class="fab fa-facebook"></i>
-                    <span>Like us on Facebook</span>
-                </a>
-                <a href="#" class="connect-item">
-                    <i class="fab fa-instagram"></i>
-                    <span>Follow us on Instagram</span>
+                    <i class="fas fa-utensils"></i>
+                    <span>Nutrition & Allergens</span>
                 </a>
                 <a href="#" class="connect-item">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>Download the Pepe's App</span>
+                    <span>Download the App</span>
+                </a>
+                <a href="#" class="connect-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
                 </a>
             </div>
         </div>
@@ -175,37 +178,47 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h2>PEPE'S</h2>
+                <h2>Cluck <span style="color:var(--text-white)">N</span> Smash</h2>
             </div>
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <a href="#franchise">Franchising</a>
-                    <a href="#menu">Nutrition and Allergens</a>
-                    <a href="#news">What's New</a>
-                    <a href="#jobs">Jobs</a>
-                    <a href="#contact">Contact Us</a>
+                    <h3>About Us</h3>
+                    <a href="#">Our Story</a>
+                    <a href="#">Franchising</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Sustainability</a>
                 </div>
                 <div class="footer-column">
-                    <h3>Download Our App</h3>
+                    <h3>Menu</h3>
+                    <a href="#">Chicken</a>
+                    <a href="#">Burgers</a>
+                    <a href="#">Sides</a>
+                    <a href="#">Drinks</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Get The App</h3>
                     <div class="app-buttons">
                         <a href="#" class="app-btn">
                             <i class="fab fa-apple"></i>
-                            <span>App Store</span>
+                            <div>
+                                <small>Download on the</small>
+                                <span>App Store</span>
+                            </div>
                         </a>
                         <a href="#" class="app-btn">
                             <i class="fab fa-google-play"></i>
-                            <span>Play Store</span>
+                            <div>
+                                <small>Get it on</small>
+                                <span>Google Play</span>
+                            </div>
                         </a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -214,7 +227,7 @@
                     <a href="#privacy">Privacy Policy</a>
                     <a href="#terms">Terms and Conditions</a>
                 </div>
-                <p>&copy; 2023 Pepe's Piri Piri. All rights reserved.</p>
+                <p>&copy; 2023 Cluck N Smash. All rights reserved.</p>
             </div>
         </div>
     </footer>

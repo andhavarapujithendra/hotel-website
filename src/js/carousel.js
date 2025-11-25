@@ -1,19 +1,22 @@
-// Large Carousel Data
+// Large Carousel Data - Uses local GIFs, falls back to online if not found
 const largeCarouselData = [
     {
-        image: 'https://media.giphy.com/media/3o6ZsW0L7D77V69fQY/giphy.gif',
-        title: 'Flame-Grilled Perfection',
-        description: 'Our signature piri piri chicken, grilled to perfection'
+        image: 'assets/gifs/carousel-1.gif',
+        fallback: 'https://media.giphy.com/media/4ayiIWaq2VULC/giphy.gif',
+        title: '🔥 Smash Burger Special',
+        description: 'Juicy beef patty, melted cheese, fresh toppings - 20% OFF!'
     },
     {
-        image: 'https://media.giphy.com/media/l3vR9IEU6nY1ZRExW/giphy.gif',
-        title: 'Fresh Ingredients',
-        description: 'Made with the finest, freshest ingredients daily'
+        image: 'assets/gifs/carousel-1.gif',
+        fallback: 'https://media.giphy.com/media/3oEjHV0z8S7WM4MwnK/giphy.gif',
+        title: 'Nashville Hot Chicken',
+        description: 'Crispy, spicy, and absolutely irresistible'
     },
     {
-        image: 'https://media.giphy.com/media/3o7qDWp7hxBA1e8u9W/giphy.gif',
-        title: 'Bold Flavors',
-        description: 'Experience the authentic taste of piri piri'
+        image: 'assets/gifs/carousel-1.gif',
+        fallback: 'https://media.giphy.com/media/l0HlHJGHe3yAMhdQY/giphy.gif',
+        title: '💥 Double Burger Deal',
+        description: 'Buy 2 Burgers, Get 1 FREE - Limited Time Only!'
     }
 ];
 
@@ -39,9 +42,11 @@ const itemsCarouselData = [
 // Initialize Large Carousel
 function initLargeCarousel() {
     const track = document.querySelector('.large-carousel-track');
-    const dotsContainer = document.getElementById('large-dots');
-    const prevBtn = document.getElementById('large-prev');
-    const nextBtn = document.getElementById('large-next');
+    const dotsContainer = document.querySelector('.carousel-indicators');
+    const prevBtn = document.querySelector('.large-carousel-container .prev-btn');
+    const nextBtn = document.querySelector('.large-carousel-container .next-btn');
+
+    if (!track || !dotsContainer || !prevBtn || !nextBtn) return;
 
     let currentIndex = 0;
 
@@ -49,13 +54,27 @@ function initLargeCarousel() {
     largeCarouselData.forEach((item, index) => {
         const slide = document.createElement('div');
         slide.className = 'large-carousel-slide';
-        slide.innerHTML = `
-            <img src="${item.image}" alt="${item.title}">
-            <div class="slide-caption">
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
-            </div>
+
+        const img = document.createElement('img');
+        img.alt = item.title;
+
+        // Try to load local image first, fallback to online if it fails
+        img.src = item.image;
+        img.onerror = function () {
+            if (item.fallback) {
+                this.src = item.fallback;
+            }
+        };
+
+        const caption = document.createElement('div');
+        caption.className = 'slide-caption';
+        caption.innerHTML = `
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
         `;
+
+        slide.appendChild(img);
+        slide.appendChild(caption);
         track.appendChild(slide);
 
         // Create dot
@@ -67,7 +86,7 @@ function initLargeCarousel() {
 
     function updateCarousel() {
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        document.querySelectorAll('.carousel-dots .dot').forEach((dot, index) => {
+        document.querySelectorAll('.carousel-indicators .dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
     }
@@ -97,8 +116,10 @@ function initLargeCarousel() {
 // Initialize Small Items Carousel
 function initItemsCarousel() {
     const track = document.querySelector('.items-carousel-track');
-    const prevBtn = document.getElementById('items-prev');
-    const nextBtn = document.getElementById('items-next');
+    const prevBtn = document.querySelector('.items-nav-btn.prev');
+    const nextBtn = document.querySelector('.items-nav-btn.next');
+
+    if (!track || !prevBtn || !nextBtn) return;
 
     let currentPosition = 0;
     const itemWidth = 300; // 280px + 20px gap
@@ -122,7 +143,8 @@ function initItemsCarousel() {
     }
 
     function scrollNext() {
-        const containerWidth = document.querySelector('.items-carousel').offsetWidth;
+        const container = document.querySelector('.items-carousel-container');
+        const containerWidth = container ? container.offsetWidth : 0;
         const visibleItems = Math.floor(containerWidth / itemWidth);
         const maxScroll = (itemsCarouselData.length - visibleItems) * itemWidth;
 
