@@ -95,29 +95,73 @@ h1 {
     gap: 8px;
 }
 
+.logo-text:hover {
+    transform: scale(1.05);
+}
+
 .logo-cluck {
-    color: var(--primary-violet);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #000000;
+    paint-order: stroke fill;
+    animation: logoGlow 3s ease-in-out infinite;
+    transition: all 0.3s;
 }
 
 .logo-n {
-    color: var(--text-white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #FFD100;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #000000;
+    paint-order: stroke fill;
+    animation: logoPulse 2s ease-in-out infinite;
+    transition: all 0.3s;
 }
 
 .logo-smash {
-    color: var(--primary-pink);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #000000;
+    paint-order: stroke fill;
+    animation: logoGlow 3s ease-in-out infinite 0.5s;
+    transition: all 0.3s;
 }
 
-.logo-text:hover .logo-cluck {
-    color: var(--primary-pink);
-    transform: scale(1.05);
-}
-
+.logo-text:hover .logo-cluck,
 .logo-text:hover .logo-smash {
-    color: var(--primary-violet);
-    transform: scale(1.05);
+    color: #FFD100;
+    animation: none;
+}
+
+.logo-text:hover .logo-n {
+    transform: scale(1.2) rotate(5deg);
+    animation: none;
+}
+
+/* Logo Animations */
+@keyframes logoGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(255, 209, 0, 0.8));
+    }
+}
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px rgba(255, 209, 0, 0.6));
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 20px rgba(255, 209, 0, 1));
+    }
 }
 
 /* Hamburger Menu Button - Always Visible */
