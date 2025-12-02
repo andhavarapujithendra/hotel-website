@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when clicking on a nav link
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+            const href = link.getAttribute('href');
 
             // Close mobile menu
             if (hamburgerBtn) {
@@ -25,10 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 navMenu.classList.remove('active');
             }
 
-            // Smooth scroll to section
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Only prevent default and smooth scroll for anchor links (starting with #)
+            if (href && href.startsWith('#')) {
+                event.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                // Smooth scroll to section
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
             }
+            // For external links (menu.html, index.html), allow default navigation
         });
     });
 

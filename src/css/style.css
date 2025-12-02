@@ -403,6 +403,11 @@ section h2 {
     color: var(--text-white);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     font-family: 'DM Sans', sans-serif;
+    --shadow-hover: 0 10px 25px rgba(138, 0, 196, 0.25);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero p {

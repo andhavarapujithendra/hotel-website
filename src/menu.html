@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cluck N Smash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1><a href="index.html" class="logo-text"><span class="logo-cluck">Cluck</span> <span
+                        class="logo-n">N</span> <span class="logo-smash">Smash</span></a></h1>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="index.html#flavours" class="nav-link">Flavours</a>
+                <a href="index.html#locations" class="nav-link">Locations</a>
+                <a href="index.html#franchise" class="nav-link">Franchise</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h2>Our Menu</h2>
+            <p>Explore our delicious selection of Nashville Hot Chicken & Smash Burgers</p>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav-section">
+        <div class="category-nav-container">
+            <nav class="category-nav" id="categoryNav">
+                <button class="category-btn active" data-category="all">All Items</button>
+                <button class="category-btn" data-category="loaded">Homestyle</button>
+                <button class="category-btn" data-category="sandwiches">Sandwiches</button>
+                <button class="category-btn" data-category="burgers">Burgers</button>
+                <button class="category-btn" data-category="combos">Combos</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="sauces">Sauces</button>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Menu Items Section -->
+    <section class="menu-items-section">
+        <div class="menu-container" id="menuContainer">
+            <!-- Category sections will be dynamically inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Cluck <span style="color:var(--text-white)">N</span> Smash</h2>
+            </div>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <a href="#">Our Story</a>
+                    <a href="#">Franchising</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Sustainability</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Menu</h3>
+                    <a href="menu.html">Chicken</a>
+                    <a href="menu.html">Burgers</a>
+                    <a href="menu.html">Sides</a>
+                    <a href="menu.html">Drinks</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Get The App</h3>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <small>Download on the</small>
+                                <span>App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <small>Get it on</small>
+                                <span>Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms and Conditions</a>
+                </div>
+                <p>&copy; 2023 Cluck N Smash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
