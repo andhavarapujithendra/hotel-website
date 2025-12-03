@@ -438,6 +438,7 @@ function renderAllCategories() {
         const category = menuCategories[categoryKey];
         return createCategorySection(categoryKey, category);
     }).join('');
+    console.log('adasdas');
 
     menuContainer.innerHTML = categoriesHTML;
 }
