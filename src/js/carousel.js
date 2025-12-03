@@ -20,23 +20,24 @@ const largeCarouselData = [
     }
 ];
 
-// Small Items Carousel Data
+// Small Items Carousel Data - Showcase items from each menu category
 const itemsCarouselData = [
-    { image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop', title: 'Piri Piri Chicken', description: 'Flame-grilled with your choice of spice' },
-    { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop', title: 'Gourmet Burger', description: 'Juicy beef patty in a brioche bun' },
-    { image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop', title: 'Spicy Wings', description: 'Crispy wings with signature sauce' },
-    { image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop', title: 'Chicken Wrap', description: 'Grilled chicken with fresh veggies' },
-    { image: 'https://images.unsplash.com/photo-1534939561126-855f86218185?w=400&h=300&fit=crop', title: 'Rice Bowl', description: 'Spicy rice with succulent chicken' },
-    { image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400&h=300&fit=crop', title: 'Loaded Fries', description: 'Fries with chicken and cheese' },
-    { image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?w=400&h=300&fit=crop', title: 'Lamb Burger', description: 'Succulent lamb patty with mint sauce' },
-    { image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop', title: 'Chicken Pitta', description: 'Tender chicken in a toasted pitta' },
-    { image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop', title: 'Paneer Wrap', description: 'Grilled paneer cheese with salad' },
-    { image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop', title: 'Chicken Strips', description: 'Boneless strips of tender chicken' },
-    { image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop', title: 'BBQ Wings', description: 'Smoky BBQ flavored chicken wings' },
-    { image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop', title: 'Chicken Burrito', description: 'Mexican style burrito with spicy rice' },
-    { image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop', title: 'Caesar Salad', description: 'Fresh salad with grilled chicken breast' },
-    { image: 'https://images.unsplash.com/photo-1625938145744-e380515399b7?w=400&h=300&fit=crop', title: 'Corn on Cob', description: 'Grilled corn with butter and spices' },
-    { image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=400&h=300&fit=crop', title: 'Nachos', description: 'Crispy nachos with salsa and cheese' }
+    // Homestyle or Loaded
+    { image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80', title: '9 Chopped Tenders', description: 'Fries loaded with mac and cheese, pickles, mayo', price: '$10.99' },
+    // Chicken Sandwiches
+    { image: 'https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80', title: 'The Original', description: 'Pickles, mayo, coleslaw, sauce', price: '$8.99' },
+    // Smash Burgers
+    { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', title: 'The Classic Smash', description: 'Lettuce, tomato, American cheese, pickles', price: '$7.99' },
+    // Sides
+    { image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80', title: 'Cheese Overloaded Fries', description: 'Fries loaded with melted cheese', price: '$5.99' },
+    // Drinks
+    { image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80', title: 'Lemonade', description: 'Fresh squeezed lemonade', price: '$2.99' },
+    // Desserts & Milkshakes
+    { image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80', title: 'OREO Top Loaded Shake', description: 'Milkshake topped with OREO cookies', price: '$7.99' },
+    // Sauces
+    { image: 'https://images.unsplash.com/photo-1472476443507-c7a392dd12c7?auto=format&fit=crop&w=800&q=80', title: 'Side of Ranch Dipper', description: 'Creamy ranch dipping sauce', price: '$0.99' },
+    // Another popular item
+    { image: 'https://images.unsplash.com/photo-1608767221051-2b9d18f8ca1e?auto=format&fit=crop&w=800&q=80', title: 'Cluck Up Nashville', description: 'Pickles, spicy mayo, pepper jack cheese, lettuce', price: '$9.49' },
 ];
 
 // Initialize Large Carousel
@@ -133,6 +134,7 @@ function initItemsCarousel() {
             <div class="item-slide-content">
                 <h3>${item.title}</h3>
                 <p>${item.description}</p>
+                ${item.price ? `<span class="item-price">${item.price}</span>` : ''}
             </div>
         `;
         track.appendChild(slide);

@@ -500,6 +500,21 @@ body {
     font-weight: 700;
 }
 
+.sauce-desc {
+    font-size: 0.9em;
+    color: var(--text-grey);
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.sauce-price {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-pink);
+    margin-top: 10px;
+}
+
 .heat-level {
     display: flex;
     justify-content: center;

@@ -111,43 +111,6 @@ const menuCategories = {
             }
         ]
     },
-    combos: {
-        name: 'Combos',
-        items: [
-            {
-                id: 13,
-                name: 'Tender Combo',
-                price: 13.99,
-                description: '3 Tenders, Fries, Drink, Dipping Sauce',
-                image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 14,
-                name: 'Slider Trio',
-                price: 14.99,
-                description: '3 Sliders (Classic, Spicy, BBQ), Fries',
-                image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 15,
-                name: 'Family Feast',
-                price: 39.99,
-                description: '12 Tenders, 4 Sliders, Large Fries, 4 Drinks',
-                image: 'https://images.unsplash.com/photo-1513639776629-7b61b0ca496c?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 16,
-                name: 'Hot Chicken Plate',
-                price: 15.99,
-                description: '2 Hot Tenders, Mac & Cheese, Coleslaw, Bread',
-                image: 'https://images.unsplash.com/photo-1626082896540-e1c1e5e5e4b5?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            }
-        ]
-    },
     sides: {
         name: 'Sides',
         items: [
@@ -488,7 +451,6 @@ function generatePlaceholderImage(category) {
         'loaded': { start: '%238A00C4', end: '%23C724B1' },
         'sandwiches': { start: '%239D4EDD', end: '%23FF1493' },
         'burgers': { start: '%23FF1493', end: '%23C724B1' },
-        'combos': { start: '%23C724B1', end: '%23FF1493' },
         'sides': { start: '%238A00C4', end: '%239D4EDD' },
         'drinks': { start: '%23FF1493', end: '%23C724B1' },
         'desserts': { start: '%23FF69B4', end: '%23FFB6C1' },
