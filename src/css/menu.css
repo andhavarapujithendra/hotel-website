@@ -9,10 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    max-width: 100vw;
-    /* Prevent horizontal scroll without using overflow */
-    overflow-x: visible !important;
-    /* Override style.css overflow-x: hidden */
+    overflow-x: hidden !important;
     overflow-y: auto !important;
 }
 
