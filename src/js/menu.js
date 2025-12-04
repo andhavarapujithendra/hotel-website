@@ -394,11 +394,19 @@ const categoryButtons = document.querySelectorAll('.category-btn');
 let isScrolling = false;
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
+function initializeMenu() {
     renderAllCategories();
     setupCategoryNavigation();
     setupScrollSpy();
-});
+}
+
+// Run on DOM ready - with fallback for race conditions
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeMenu);
+} else {
+    // DOM already loaded (script loaded late)
+    initializeMenu();
+}
 
 // Render all categories with headers
 function renderAllCategories() {
@@ -550,9 +558,3 @@ function updateActiveCategory(category, shouldScroll = false) {
     });
 }
 
-// Initialize Menu Page
-document.addEventListener('DOMContentLoaded', () => {
-    renderMenu();
-    setupCategoryNavigation();
-    setupScrollSpy();
-});
