@@ -20,24 +20,10 @@ const largeCarouselData = [
     }
 ];
 
-// Small Items Carousel Data - Showcase items from each menu category
+// Small Items Carousel Data - Homepage Images
 const itemsCarouselData = [
-    // Homestyle or Loaded
-    { image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80', title: '9 Chopped Tenders', description: 'Fries loaded with mac and cheese, pickles, mayo', price: '$10.99' },
-    // Chicken Sandwiches
-    { image: 'https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80', title: 'The Original', description: 'Pickles, mayo, coleslaw, sauce', price: '$8.99' },
-    // Smash Burgers
-    { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', title: 'The Classic Smash', description: 'Lettuce, tomato, American cheese, pickles', price: '$7.99' },
-    // Sides
-    { image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80', title: 'Cheese Overloaded Fries', description: 'Fries loaded with melted cheese', price: '$5.99' },
-    // Drinks
-    { image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80', title: 'Lemonade', description: 'Fresh squeezed lemonade', price: '$2.99' },
-    // Desserts & Milkshakes
-    { image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80', title: 'OREO Top Loaded Shake', description: 'Milkshake topped with OREO cookies', price: '$7.99' },
-    // Sauces
-    { image: 'https://images.unsplash.com/photo-1472476443507-c7a392dd12c7?auto=format&fit=crop&w=800&q=80', title: 'Side of Ranch Dipper', description: 'Creamy ranch dipping sauce', price: '$0.99' },
-    // Another popular item
-    { image: 'https://images.unsplash.com/photo-1608767221051-2b9d18f8ca1e?auto=format&fit=crop&w=800&q=80', title: 'Cluck Up Nashville', description: 'Pickles, spicy mayo, pepper jack cheese, lettuce', price: '$9.49' },
+    { image: 'assets/images/HOMEPAGE1.jpeg', title: '', description: '', price: '' },
+    { image: 'assets/images/HOMEPAGE2.jpeg', title: '', description: '', price: '' },
 ];
 
 // Initialize Large Carousel
@@ -122,8 +108,7 @@ function initItemsCarousel() {
 
     if (!track || !prevBtn || !nextBtn) return;
 
-    let currentPosition = 0;
-    const itemWidth = 300; // 280px + 20px gap
+    let currentIndex = 0;
 
     // Create items
     itemsCarouselData.forEach(item => {
@@ -131,38 +116,42 @@ function initItemsCarousel() {
         slide.className = 'item-slide';
         slide.innerHTML = `
             <img src="${item.image}" alt="${item.title}">
+            ${item.title ? `
             <div class="item-slide-content">
                 <h3>${item.title}</h3>
                 <p>${item.description}</p>
                 ${item.price ? `<span class="item-price">${item.price}</span>` : ''}
             </div>
+            ` : ''}
         `;
         track.appendChild(slide);
     });
 
     function updatePosition() {
-        track.style.transform = `translateX(-${currentPosition}px)`;
+        const slideWidth = track.querySelector('.item-slide')?.offsetWidth || 0;
+        const gap = 30; // matching CSS gap
+        const scrollAmount = slideWidth + gap;
+        track.style.transform = `translateX(-${currentIndex * scrollAmount}px)`;
     }
 
     function scrollNext() {
-        const container = document.querySelector('.items-carousel-container');
-        const containerWidth = container ? container.offsetWidth : 0;
-        const visibleItems = Math.floor(containerWidth / itemWidth);
-        const maxScroll = (itemsCarouselData.length - visibleItems) * itemWidth;
-
-        if (currentPosition < maxScroll) {
-            currentPosition += itemWidth;
+        if (currentIndex < itemsCarouselData.length - 1) {
+            currentIndex++;
             updatePosition();
         } else {
-            // Optional: Loop back to start
-            currentPosition = 0;
+            // Loop back to start
+            currentIndex = 0;
             updatePosition();
         }
     }
 
     function scrollPrev() {
-        if (currentPosition > 0) {
-            currentPosition -= itemWidth;
+        if (currentIndex > 0) {
+            currentIndex--;
+            updatePosition();
+        } else {
+            // Loop to end
+            currentIndex = itemsCarouselData.length - 1;
             updatePosition();
         }
     }

@@ -1,42 +1,5 @@
 // Menu Data organized by category
 const menuCategories = {
-    loaded: {
-        name: 'Homestyle or Loaded',
-        items: [
-            {
-                id: 1,
-                name: '9 Chopped Tenders',
-                price: 10.99,
-                description: 'Fries loaded with mac and cheese, pickles, mayo',
-                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 2,
-                name: 'BBQ Chopped Tenders',
-                price: 10.99,
-                description: 'Chopped tenders, bacon, fries, BBQ sauce, coleslaw',
-                image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 3,
-                name: 'Korea Tenders',
-                price: 11.99,
-                description: 'Fries, crispy onions chips, Korean sauce, kimchi, siracha',
-                image: 'https://images.unsplash.com/photo-1626082896540-e1c1e5e5e4b5?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 4,
-                name: 'Fries and Tenders',
-                price: 11.99,
-                description: 'Classic fries with crispy tenders',
-                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            }
-        ]
-    },
     sandwiches: {
         name: 'Chicken Sandwiches',
         items: [
@@ -53,7 +16,7 @@ const menuCategories = {
                 name: 'Cluck Up Nashville',
                 price: 9.49,
                 description: 'Pickles, spicy mayo, pepper jack cheese, lettuce',
-                image: 'https://images.unsplash.com/photo-1608767221051-2b9d18f8ca1e?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Cluck Up Nashville.png',
                 inStock: true
             },
             {
@@ -61,7 +24,7 @@ const menuCategories = {
                 name: 'The Club',
                 price: 9.99,
                 description: 'BBQ bacon, tomato, American cheese, lettuce',
-                image: 'https://images.unsplash.com/photo-1619740455991-c3c7d2be338e?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/The Club.png',
                 inStock: true
             },
             {
@@ -69,7 +32,7 @@ const menuCategories = {
                 name: 'Jacksons Honey',
                 price: 9.49,
                 description: 'Spicy mayo, pickles, honey sauce',
-                image: 'https://images.unsplash.com/photo-1619093309182-bbe985464246?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Jacksons Honey.png',
                 inStock: true
             }
         ]
@@ -111,6 +74,43 @@ const menuCategories = {
             }
         ]
     },
+    loaded: {
+        name: 'Homestyle or Loaded',
+        items: [
+            {
+                id: 1,
+                name: '9 Chopped Tenders',
+                price: 10.99,
+                description: 'Fries loaded with mac and cheese, pickles, mayo',
+                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
+                inStock: true
+            },
+            {
+                id: 2,
+                name: 'BBQ Chopped Tenders',
+                price: 10.99,
+                description: 'Chopped tenders, bacon, fries, BBQ sauce, coleslaw',
+                image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
+                inStock: true
+            },
+            {
+                id: 3,
+                name: 'Korea Tenders',
+                price: 11.99,
+                description: 'Fries, crispy onions chips, Korean sauce, kimchi, siracha',
+                image: 'assets/images/Korea Tenders.png',
+                inStock: true
+            },
+            {
+                id: 4,
+                name: 'Fries and Tenders',
+                price: 11.99,
+                description: 'Classic fries with crispy tenders',
+                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
+                inStock: true
+            }
+        ]
+    },
     sides: {
         name: 'Sides',
         items: [
@@ -119,7 +119,7 @@ const menuCategories = {
                 name: 'Fries',
                 price: 3.99,
                 description: 'Golden crispy french fries',
-                image: 'https://images.unsplash.com/photo-1573080496987-a199f8cd4058?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Fries.png',
                 inStock: true
             },
             {
@@ -127,7 +127,7 @@ const menuCategories = {
                 name: 'Coleslaw',
                 price: 2.99,
                 description: 'Fresh and creamy coleslaw',
-                image: 'https://images.unsplash.com/photo-1625938145744-e38051524294?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Coleslaw.png',
                 inStock: true
             },
             {
@@ -143,7 +143,76 @@ const menuCategories = {
                 name: 'Macaroni and Cheese',
                 price: 4.99,
                 description: 'Creamy homemade mac and cheese',
-                image: 'https://images.unsplash.com/photo-1612152605347-f93296cb657d?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Macaroni and Cheese.png',
+                inStock: true
+            }
+        ]
+    },
+    sauces: {
+        name: 'Sauces',
+        items: [
+            {
+                id: 36,
+                name: 'Side of Ranch Dipper',
+                price: 0.99,
+                description: 'Creamy ranch dipping sauce',
+                image: 'assets/images/Ranch Dipper .png',
+                inStock: true
+            },
+            {
+                id: 37,
+                name: 'Side of Siracha Ranch Dipper',
+                price: 0.99,
+                description: 'Spicy siracha ranch sauce',
+                image: 'assets/images/Siracha Ranch Dipper.png',
+                inStock: true
+            },
+            {
+                id: 38,
+                name: 'Side of BBQ Dipper',
+                price: 0.79,
+                description: 'Sweet and tangy BBQ sauce',
+                image: 'assets/images/Side of BBQ Dipper .png',
+                inStock: true
+            },
+            {
+                id: 39,
+                name: 'Side of Spicy Mayo Dipper',
+                price: 0.99,
+                description: 'Creamy spicy mayonnaise',
+                image: 'assets/images/Side of Spicy Mayo Dipper .png',
+                inStock: true
+            },
+            {
+                id: 40,
+                name: 'Side of Mayo Dipper',
+                price: 0.79,
+                description: 'Classic mayonnaise',
+                image: 'assets/images/Side of Mayo Dipper .png',
+                inStock: true
+            },
+            {
+                id: 41,
+                name: 'Side of Korea Dipper',
+                price: 0.99,
+                description: 'Korean-style dipping sauce',
+                image: 'assets/images/Side of Korea Dipper.png',
+                inStock: true
+            },
+            {
+                id: 42,
+                name: 'Side of Buffalo Dipper',
+                price: 0.99,
+                description: 'Spicy buffalo wing sauce',
+                image: 'assets/images/Side of Buffalo Dipper.png',
+                inStock: true
+            },
+            {
+                id: 43,
+                name: 'Side of Honey Dipper',
+                price: 0.79,
+                description: 'Sweet honey dipping sauce',
+                image: 'assets/images/Side of Honey Dipper.png',
                 inStock: true
             }
         ]
@@ -156,7 +225,7 @@ const menuCategories = {
                 name: 'Diet Coke',
                 price: 2.49,
                 description: 'Refreshing diet cola',
-                image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Diet Coke .png',
                 inStock: true
             },
             {
@@ -188,7 +257,7 @@ const menuCategories = {
                 name: 'Dr. Peppers',
                 price: 2.49,
                 description: 'Classic Dr. Pepper soda',
-                image: 'https://images.unsplash.com/photo-1629203851288-7ece5f30d34e?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Dr. Peppers.png',
                 inStock: true
             },
             {
@@ -220,38 +289,14 @@ const menuCategories = {
                 name: 'Water Bottle',
                 price: 1.49,
                 description: 'Bottled water',
-                image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Water Bottle.png',
                 inStock: true
             }
         ]
     },
-    desserts: {
-        name: 'Desserts & Milkshakes',
+    milkshakes: {
+        name: 'Milkshakes',
         items: [
-            {
-                id: 26,
-                name: 'Brownie',
-                price: 4.99,
-                description: 'Warm chocolate brownie',
-                image: 'https://images.unsplash.com/photo-1564355808539-22fef70a3028?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 27,
-                name: 'Chocolate Cookie',
-                price: 3.99,
-                description: 'Freshly baked chocolate chip cookie',
-                image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 28,
-                name: 'Apple Pie',
-                price: 5.99,
-                description: 'Classic apple pie slice',
-                image: 'https://images.unsplash.com/photo-1535920527002-b35e96722eb9?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
             {
                 id: 29,
                 name: 'Vanilla Milkshake',
@@ -265,7 +310,7 @@ const menuCategories = {
                 name: 'Strawberry Milkshake',
                 price: 5.99,
                 description: 'Fresh strawberry milkshake',
-                image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Strawberry Milkshake.png',
                 inStock: true
             },
             {
@@ -273,7 +318,7 @@ const menuCategories = {
                 name: 'Chocolate Milkshake',
                 price: 5.99,
                 description: 'Rich chocolate milkshake',
-                image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/Chocolate Milkshake.png',
                 inStock: true
             },
             {
@@ -281,7 +326,7 @@ const menuCategories = {
                 name: 'OREO Top Loaded Shake',
                 price: 7.99,
                 description: 'Milkshake topped with OREO cookies',
-                image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80',
+                image: 'assets/images/OREO Top Loaded Shake.png',
                 inStock: true
             },
             {
@@ -310,71 +355,31 @@ const menuCategories = {
             }
         ]
     },
-    sauces: {
-        name: 'Sauces',
+    desserts: {
+        name: 'Desserts',
         items: [
             {
-                id: 36,
-                name: 'Side of Ranch Dipper',
-                price: 0.99,
-                description: 'Creamy ranch dipping sauce',
-                image: 'https://images.unsplash.com/photo-1472476443507-c7a392dd12c7?auto=format&fit=crop&w=800&q=80',
+                id: 26,
+                name: 'Brownie',
+                price: 4.99,
+                description: 'Warm chocolate brownie',
+                image: 'assets/images/Brownie.png',
                 inStock: true
             },
             {
-                id: 37,
-                name: 'Side of Siracha Ranch Dipper',
-                price: 0.99,
-                description: 'Spicy siracha ranch sauce',
-                image: 'https://images.unsplash.com/photo-1625938145744-e38051524294?auto=format&fit=crop&w=800&q=80',
+                id: 27,
+                name: 'Chocolate Cookie',
+                price: 3.99,
+                description: 'Freshly baked chocolate chip cookie',
+                image: 'assets/images/Choclate Cookie.png',
                 inStock: true
             },
             {
-                id: 38,
-                name: 'Side of BBQ Dipper',
-                price: 0.79,
-                description: 'Sweet and tangy BBQ sauce',
-                image: 'https://images.unsplash.com/photo-1623689046286-01d812cc8eb7?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 39,
-                name: 'Side of Spicy Mayo Dipper',
-                price: 0.99,
-                description: 'Creamy spicy mayonnaise',
-                image: 'https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 40,
-                name: 'Side of Mayo Dipper',
-                price: 0.79,
-                description: 'Classic mayonnaise',
-                image: 'https://images.unsplash.com/photo-1519623286303-642856e0d75c?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 41,
-                name: 'Side of Korea Dipper',
-                price: 0.99,
-                description: 'Korean-style dipping sauce',
-                image: 'https://images.unsplash.com/photo-1619860860774-1e7e17397532?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 42,
-                name: 'Side of Buffalo Dipper',
-                price: 0.99,
-                description: 'Spicy buffalo wing sauce',
-                image: 'https://images.unsplash.com/photo-1614398751058-eb2e0bf63e53?auto=format&fit=crop&w=800&q=80',
-                inStock: true
-            },
-            {
-                id: 43,
-                name: 'Side of Honey Dipper',
-                price: 0.79,
-                description: 'Sweet honey dipping sauce',
-                image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80',
+                id: 28,
+                name: 'Apple Pie',
+                price: 5.99,
+                description: 'Classic apple pie slice',
+                image: 'https://images.unsplash.com/photo-1535920527002-b35e96722eb9?auto=format&fit=crop&w=800&q=80',
                 inStock: true
             }
         ]
@@ -448,13 +453,14 @@ function createMenuItemCard(item, category) {
 // Generate Placeholder Image based on category
 function generatePlaceholderImage(category) {
     const colors = {
-        'loaded': { start: '%238A00C4', end: '%23C724B1' },
         'sandwiches': { start: '%239D4EDD', end: '%23FF1493' },
         'burgers': { start: '%23FF1493', end: '%23C724B1' },
+        'loaded': { start: '%238A00C4', end: '%23C724B1' },
         'sides': { start: '%238A00C4', end: '%239D4EDD' },
+        'sauces': { start: '%239D4EDD', end: '%238A00C4' },
         'drinks': { start: '%23FF1493', end: '%23C724B1' },
-        'desserts': { start: '%23FF69B4', end: '%23FFB6C1' },
-        'sauces': { start: '%239D4EDD', end: '%238A00C4' }
+        'milkshakes': { start: '%23FF69B4', end: '%23FFB6C1' },
+        'desserts': { start: '%23FF69B4', end: '%23FFB6C1' }
     };
 
     const gradient = colors[category] || colors['loaded'];

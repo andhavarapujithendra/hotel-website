@@ -1,8 +1,14 @@
 /* Menu Page Specific Styles */
 
+/* Global box-sizing to prevent overflow */
+* {
+    box-sizing: border-box;
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Don't set overflow on html or body - it breaks sticky positioning! */
@@ -75,7 +81,8 @@ header {
 }
 
 .category-nav-container {
-    max-width: 1400px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     overflow-x: auto;
     overflow-y: hidden;
@@ -151,9 +158,10 @@ header {
 }
 
 .menu-container {
-    max-width: 1400px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 /* Category Section */
