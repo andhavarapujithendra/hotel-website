@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }, { passive: true });
 
-    // Scroll animations for sections
-    const sections = document.querySelectorAll('section');
+    // Scroll animations for sections (exclude menu page sections)
+    const sections = document.querySelectorAll('section:not(.menu-hero):not(.menu-items-section):not(.category-nav-section)');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
