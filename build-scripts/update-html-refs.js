@@ -11,11 +11,14 @@ function updateHtmlRefs(filename) {
     html = html.replace(/href="css\/carousel\.css"/g, 'href="css/carousel.min.css"');
     html = html.replace(/href="css\/animations\.css"/g, 'href="css/animations.min.css"');
     html = html.replace(/href="css\/menu\.css"/g, 'href="css/menu.min.css"');
+    html = html.replace(/href="css\/locations\.css"/g, 'href="css/locations.min.css"');
+    html = html.replace(/href="css\/fonts\.css"/g, 'href="css/fonts.min.css"');
 
     // Replace JS references with minified versions
     html = html.replace(/src="js\/script\.js"/g, 'src="js/script.min.js"');
     html = html.replace(/src="js\/carousel\.js"/g, 'src="js/carousel.min.js"');
     html = html.replace(/src="js\/menu\.js"/g, 'src="js/menu.min.js"');
+    html = html.replace(/src="js\/locations\.js"/g, 'src="js/locations.min.js"');
 
     // Write the updated HTML back
     fs.writeFileSync(htmlPath, html, 'utf8');
@@ -25,3 +28,4 @@ function updateHtmlRefs(filename) {
 // Process all HTML files
 updateHtmlRefs('index.html');
 updateHtmlRefs('menu.html');
+updateHtmlRefs('locations.html');
