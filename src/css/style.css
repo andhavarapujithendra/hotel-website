@@ -477,12 +477,12 @@ body {
 }
 
 /* What's Your Flavour Section */
-.flavours-section {
+.flavors-section {
     background: var(--bg-light);
     padding: 80px 0;
 }
 
-.flavours-grid {
+.flavors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 30px;
@@ -510,6 +510,22 @@ body {
     font-size: 3em;
     margin-bottom: 15px;
 }
+
+.sauce-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: block;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flavour-item:hover .sauce-image {
+    transform: scale(1.1);
+}
+
 
 .flavour-item h3 {
     font-size: 1.5em;
@@ -793,8 +809,8 @@ footer p {
         font-size: 2.2em;
     }
 
-    /* Flavours Grid */
-    .flavours-grid {
+    /* Flavors Grid */
+    .flavors-grid {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 20px;
     }
@@ -865,8 +881,8 @@ footer p {
         font-size: 1.8em;
     }
 
-    /* Flavours Grid */
-    .flavours-grid {
+    /* Flavors Grid */
+    .flavors-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
