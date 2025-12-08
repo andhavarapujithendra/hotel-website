@@ -1,7 +1,7 @@
 // Location Images for Carousel
 const locationImages = [
     'assets/images/CLUCK N SMASH.png',
-    'assets/images/CLCUKNSMASH2.jpeg',
+    'assets/images/CLCUKNSMASH2.png',
     'assets/images/CLUCKNSMASH3.png'
 ];
 
