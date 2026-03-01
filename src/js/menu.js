@@ -83,7 +83,8 @@ const menuCategories = {
                 price: 10.99,
                 description: 'Fries loaded with mac and cheese, pickles, mayo',
                 image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 2,
@@ -91,7 +92,8 @@ const menuCategories = {
                 price: 10.99,
                 description: 'Chopped tenders, bacon, fries, BBQ sauce, coleslaw',
                 image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 3,
@@ -107,7 +109,8 @@ const menuCategories = {
                 price: 11.99,
                 description: 'Classic fries with crispy tenders',
                 image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             }
         ]
     },
@@ -226,7 +229,8 @@ const menuCategories = {
                 price: 2.49,
                 description: 'Refreshing diet cola',
                 image: 'assets/images/Diet Coke .png',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 18,
@@ -258,7 +262,8 @@ const menuCategories = {
                 price: 2.49,
                 description: 'Classic Dr. Pepper soda',
                 image: 'assets/images/Dr. Peppers.png',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 22,
@@ -274,7 +279,8 @@ const menuCategories = {
                 price: 1.99,
                 description: 'Fresh apple juice for kids',
                 image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 24,
@@ -282,7 +288,8 @@ const menuCategories = {
                 price: 2.99,
                 description: 'Freshly squeezed orange juice',
                 image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 25,
@@ -327,7 +334,8 @@ const menuCategories = {
                 price: 7.99,
                 description: 'Milkshake topped with OREO cookies',
                 image: 'assets/images/OREO Top Loaded Shake.png',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 33,
@@ -335,7 +343,8 @@ const menuCategories = {
                 price: 7.99,
                 description: 'Milkshake topped with M&M candies',
                 image: 'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 34,
@@ -343,7 +352,8 @@ const menuCategories = {
                 price: 7.99,
                 description: 'Milkshake topped with KITKAT bars',
                 image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             },
             {
                 id: 35,
@@ -351,7 +361,8 @@ const menuCategories = {
                 price: 9.99,
                 description: 'Ultimate loaded shake with OREO, M&M, and KITKAT',
                 image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
-                inStock: true
+                inStock: true,
+                hidden: true
             }
         ]
     },
@@ -420,7 +431,10 @@ function renderAllCategories() {
 
 // Create a category section with header and items
 function createCategorySection(categoryKey, category) {
-    const itemsHTML = category.items.map(item => createMenuItemCard(item, categoryKey)).join('');
+    const visibleItems = category.items.filter(item => !item.hidden);
+    if (visibleItems.length === 0) return ''; // Hide category if empty
+
+    const itemsHTML = visibleItems.map(item => createMenuItemCard(item, categoryKey)).join('');
 
     return `
         <div class="menu-category-section" id="category-${categoryKey}">
