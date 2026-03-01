@@ -406,6 +406,7 @@ let isScrolling = false;
 
 // Initialize
 function initializeMenu() {
+    console.log("Menu initialized. Checking if Cloudflare updates reflect.");
     renderAllCategories();
     setupCategoryNavigation();
     setupScrollSpy();
